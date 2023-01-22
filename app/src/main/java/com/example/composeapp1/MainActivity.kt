@@ -49,35 +49,38 @@ fun surfaceUI() {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
-            TopAppBar(backgroundColor = Color.Cyan, title = {
-                Text("Demo", color = Color.Black, fontWeight = FontWeight.Bold)
-            }, navigationIcon = {
-                IconButton(onClick = {
-                    testClick("menu", context)
-                }) {
-                    Icon(Icons.Filled.Menu, contentDescription = "menu", tint = Color.Black)
-                }
-            }, actions = {
-                IconButton(onClick = {
-                    testClick("notification", context)
+            TopAppBar(
+                backgroundColor = Color.Cyan,
+                title = {
+                    Text("Demo", color = Color.Black, fontWeight = FontWeight.Bold)
+                },
+                navigationIcon = {
+                    IconButton(onClick = {
+                        testClick("menu", context)
+                    }) {
+                        Icon(Icons.Filled.Menu, contentDescription = "menu", tint = Color.Black)
+                    }
+                },
+                actions = {
+                    IconButton(onClick = {
+                        testClick("notification", context)
 
-                }) {
-                    Icon(
-                        Icons.Filled.Notifications,
-                        contentDescription = "notification",
-                        tint = Color.Black
-                    )
-                }
-                IconButton(onClick = {
-                    testClick("search", context)
-                }) {
-                    Icon(Icons.Filled.Search, contentDescription = "search", tint = Color.Black)
-                }
+                    }) {
+                        Icon(
+                            Icons.Filled.Notifications,
+                            contentDescription = "notification",
+                            tint = Color.Black
+                        )
+                    }
+                    IconButton(onClick = {
+                        testClick("search", context)
+                    }) {
+                        Icon(Icons.Filled.Search, contentDescription = "search", tint = Color.Black)
+                    }
 
-                showSwitch()
+                    showSwitch()
 
-
-            })
+                })
         },
         floatingActionButton = {
             FloatingActionButton(
@@ -97,6 +100,7 @@ fun surfaceUI() {
                 onClick = { context.startActivity(Intent(context, ProductActivity::class.java)) }) {
                 Text(text = "Click")
             }
+
         }
     }
 }
@@ -124,7 +128,7 @@ fun showSwitch() {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview3() {
+fun DefaultPreview() {
     ComposeApp1Theme {
         surfaceUI()
     }

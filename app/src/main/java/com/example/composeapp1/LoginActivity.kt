@@ -146,7 +146,7 @@ fun logInFun(username: String, password: String, context: Context) {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun DefaultPreview1() {
     ComposeApp1Theme {
         LoginScreenUI()
     }
