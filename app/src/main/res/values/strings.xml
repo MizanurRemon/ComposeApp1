@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComposeApp1</string>
+    <string name="title_activity_product">ProductActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+</resources>
